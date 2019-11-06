@@ -1,4 +1,7 @@
-(ns classic-algorithms.sieve-of-erathostenes)
+(ns classic-algorithms.sieve-of-eratosthenes)
+
+(declare ask-number)
+(declare calculate-sieve)
 
 (defn not-multiple?
   [multiple number]
