@@ -1,22 +1,22 @@
 import math
 
-def calcula_crivo(limit_number):
+def calculate_sieve(limit_number):
     if limit_number <= 0:
         print(f'{limit_number} is less than or equal to 0, enter another number please:')
-        pede_numero()
+        ask_number()
     else:
-        maior_numero_a_ser_checado = int(math.floor(math.sqrt(limit_number)))
+        biggest_number_to_be_checked = int(math.floor(math.sqrt(limit_number)))
         lista_numeros = set()
-        for i in range(maior_numero_a_ser_checado):
-            for j in range(2, limit_number + 1):
-                if j % 2 != 0:
-                    lista_numeros.add(j)
+        for i in range(2, limit_number + 1):
+            if i % 2 != 0:
+                lista_numeros.add(i)
+        print(lista_numeros)
 
 
-def pede_numero():
-    numero_digitado = int(input("Digite um número maior que 0:"))
-    calcula_crivo(numero_digitado)
+def ask_number():
+    entered_number = int(input("Enter a number bigger than 0: "))
+    calculate_sieve(entered_number)
 
 
 if __name__ == '__main__':
-    pede_numero()
+    ask_number()
